@@ -12,7 +12,9 @@ It includes:
 - An example class singleton - Player State
 - Example Object pooling - see in game settings menu
 - A basic toggle - see in game settings menu
+
 - An Example background sprite source - https://pixabay.com/en/background-art-abstract-watercolor-2579719/
+- Base Monobehaviour based Singleton can be found at https://gist.github.com/rickyah/271e3aa31ff8079365bc
 
 Most importantly have fun Jamming! :D
 
