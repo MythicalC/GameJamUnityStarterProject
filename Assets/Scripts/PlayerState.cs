@@ -2,8 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerState: Singleton<PlayerState>  {
+public class PlayerState  {
    
+//singleton
+    private static PlayerState _instance;
+
+    public static PlayerState Instance
+    {
+        get
+        { 
+            if (_instance == null)
+            {
+                _instance = new PlayerState();
+            }
+
+            return _instance;
+        }
+    }
+
     //playerstate
     public delegate void UpdatePlayerScore(int newScore);
     public UpdatePlayerScore OnScoreUpdate;

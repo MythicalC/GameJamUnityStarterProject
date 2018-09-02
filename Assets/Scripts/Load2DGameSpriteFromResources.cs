@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.U2D;
 
-public class LoadUISpriteFromResources : MonoBehaviour {
+public class Load2DGameSpriteFromResources : MonoBehaviour {
 
-    public Image _UIImageToAssignSpriteTo;
+    public SpriteRenderer _2DToAssignSpriteTo;
     public string _spriteName = "ExampleBackground";
 
     private Sprite _loadedImage;
@@ -18,20 +18,19 @@ public class LoadUISpriteFromResources : MonoBehaviour {
 	
     public void LoadSprite()
     {
-        _loadedImage = SpriteManager.Instance.LoadSprite(_spriteName);
-
+        _loadedImage = Resources.Load <Sprite> (_spriteName);
         if (_loadedImage == null)
         {
             Debug.LogError("There was an error loading your sprite. Please ensure that it is in the resources directory and the format of the image is sprite (2D & UI)");
         }
         else
         {
-            _UIImageToAssignSpriteTo.sprite = _loadedImage;
+            _2DToAssignSpriteTo.sprite = _loadedImage;
         }
 
     }
 
     void OnDestroy() {
-        //SpriteManager.Instance.UnloadSprite(_spriteName);
+        Resources.UnloadAsset(_loadedImage);
     }
 }

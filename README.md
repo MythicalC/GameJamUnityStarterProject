@@ -8,10 +8,6 @@ It includes:
 -  A simple settings menu.
 - A simple player state score counter, with buttons that trigger increments and decrements.
 - Some example UI sprites
-- An example Monobehaviour based Singleton - See Sprite loading
-- An example class singleton - Player State
-- Example Object pooling - see in game settings menu
-- A basic toggle - see in game settings menu
 - An Example background sprite source - https://pixabay.com/en/background-art-abstract-watercolor-2579719/
 
 Most importantly have fun Jamming! :D
