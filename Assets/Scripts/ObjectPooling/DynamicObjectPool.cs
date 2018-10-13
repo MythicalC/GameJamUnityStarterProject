@@ -39,12 +39,12 @@ public class DynamicObjectPool<T_PoolOf> where T_PoolOf : MonoBehaviour
 
     private void SetValue(int key, T_PoolOf value)
     {
-        throw new NotImplementedException();
+        _objectPool[key] = value;
     }
 
     private T_PoolOf GetValue(int key)
     {
-        throw new NotImplementedException();
+        return _objectPool[key];
     }
 
     public List<T_PoolOf> GetPooledObjects(bool activeOnly = true)
