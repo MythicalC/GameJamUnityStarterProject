@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.UNetWeaver;
 using UnityEngine;
 using UnityEngine.U2D;
 
@@ -21,7 +22,7 @@ public class Load2DGameSpriteFromResources : MonoBehaviour {
         _loadedImage = SpriteManager.Instance.LoadSprite(_spriteName);
         if (_loadedImage == null)
         {
-            Debug.LogError("There was an error loading your sprite. Please ensure that it is in the resources directory and the format of the image is sprite (2D & UI)");
+            LoggingUtil.LogError("There was an error loading your sprite. Please ensure that it is in the resources directory and the format of the image is sprite (2D & UI)");
         }
         else
         {

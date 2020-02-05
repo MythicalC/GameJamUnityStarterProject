@@ -10,7 +10,7 @@ public class DoNotDestroryOnLevelChange : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
             _created = true;
-            Debug.Log("Awake: " + this.gameObject);
+            LoggingUtil.LogInfo(string.Format("Awake: {0}", this.gameObject));
         }
     }
 }

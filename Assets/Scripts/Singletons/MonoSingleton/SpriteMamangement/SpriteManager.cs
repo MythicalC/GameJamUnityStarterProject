@@ -15,7 +15,7 @@ public class SpriteManager : MonoBehaviourSingleton<SpriteManager> {
 
         if (_spriteDictionary.ContainsKey(spriteName))
         {
-            Debug.Log(string.Format("Loading sprite from Cache {0}", spriteName));
+            LoggingUtil.LogInfo(string.Format("Loading sprite from Cache {0}", spriteName));
             return _spriteDictionary[spriteName];
         }
         else
@@ -23,7 +23,7 @@ public class SpriteManager : MonoBehaviourSingleton<SpriteManager> {
             Sprite loadedImage = Resources.Load<Sprite>(spriteName);
             if (loadedImage == null)
             {
-                Debug.LogError("There was an error loading your sprite. Please ensure that it is in the resources directory and the format of the image is sprite (2D & UI)");
+                LoggingUtil.LogDebugError("There was an error loading your sprite. Please ensure that it is in the resources directory and the format of the image is sprite (2D & UI)");
                 return null;
             }
             else

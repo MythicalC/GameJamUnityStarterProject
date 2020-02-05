@@ -22,7 +22,7 @@ public class LoadUISpriteFromResources : MonoBehaviour {
 
         if (_loadedImage == null)
         {
-            Debug.LogError("There was an error loading your sprite. Please ensure that it is in the resources directory and the format of the image is sprite (2D & UI)");
+            LoggingUtil.LogError("There was an error loading your sprite. Please ensure that it is in the resources directory and the format of the image is sprite (2D & UI)");
         }
         else
         {

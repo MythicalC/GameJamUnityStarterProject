@@ -31,7 +31,7 @@ public class SpecialTestButton : Button
 
     public void OnButtonClick()
     {
-        Debug.Log(string.Format("The {0} button was clicked", _index));
+        LoggingUtil.LogInfo(string.Format("The {0} button was clicked", _index), "magenta");
     }
 
 }

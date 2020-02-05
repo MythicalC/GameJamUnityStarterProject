@@ -69,7 +69,7 @@ public class DynamicButtonPoolMono : MonoBehaviour {
             }
             else
             {
-                Debug.LogError("Dynamic Pools require a prefab and container rect.");
+                LoggingUtil.LogDebugError("Dynamic Pools require a prefab and container rect.");
                 return;
             }
         }
